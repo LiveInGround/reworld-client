@@ -40,6 +40,10 @@ class Menu(object):
                 if srv == "":
                     continue
                 self.server_list_ips.append(srv)
+                
+    def escape_menu(self):
+        self.retem = Button(text="RETURN TO GAME", y=0, scale=0.1, color=color.azure, text_origin=(-.100, -0.1))
+        self.qbem = Button(text="DISCONNECT", y=-.1, scale=0.1, color=color.azure, text_origin=(-.100, -0.1))
 
     def home_menu(self):        #OK
         self.clear()
