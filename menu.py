@@ -44,6 +44,20 @@ class Menu(object):
     def escape_menu(self):
         self.retem = Button(text="RETURN TO GAME", y=0, scale=0.1, color=color.azure, text_origin=(-.100, -0.1))
         self.qbem = Button(text="DISCONNECT", y=-.1, scale=0.1, color=color.azure, text_origin=(-.100, -0.1))
+        
+        self.retem.on_click = self.retgm
+        self.qbem.on_click = self.retm_f
+        
+    def clear_em(self):
+        destroy(self.retem)
+        destroy(self.qbem)
+        
+    def retgm(self):
+        selr.clear_em()
+        
+    def retm_f(self):
+        self.clear_em()
+        self.home_menu()
 
     def home_menu(self):        #OK
         self.clear()
